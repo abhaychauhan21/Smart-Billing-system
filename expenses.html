@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expenses</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    
+</head>
+<body>
+    <header>
+        <h1 class="logo">BILLWIZZ</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="inventory.html">Inventory</a></li>
+                <li><a href="invoices.html">Invoices</a></li>
+                <li><a href="mailing.html">Mailing & SMS</a></li>
+                <li><a href="payments.html">Payments</a></li>
+                <li><a href="expenses.html">Expenses</a></li>
+                <li><a href="customers.html">Customers</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Track Expenses</h2>
+        <table id="expense-table">
+            <thead>
+                <tr>
+                    <th>Expense ID</th>
+                    <th>Description</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="expense-list">
+                <!-- List of expenses will be populated here -->
+            </tbody>
+        </table>
+        <div id="add-expense-form">
+            <input type="text" id="expense-description" placeholder="Description" required>
+            <input type="number" id="expense-amount" placeholder="Amount" required>
+            <input type="date" id="expense-date" required>
+            <button id="add-expense-btn">Add Expense</button>
+        </div>
+        <canvas id="expense-chart" width="400" height="400"></canvas>
+    </main>
+    <footer>
+        <p>&copy; 2024 Inventory Management System. All rights reserved.</p>
+    </footer>
+    <script src="expenses.js"></script>
+</body>
+</html>

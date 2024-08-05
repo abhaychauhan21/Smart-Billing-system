@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management System</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+            if (!currentUser) {
+                window.location.href = 'login.html';
+            }
+        });
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+    <header>
+        <h1 class="logo">BILLWIZZ</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="inventory.html">Inventory</a></li>
+                <li><a href="invoices.html">Invoices</a></li>
+                <li><a href="mailing.html">Mailing & SMS</a></li>
+                <li><a href="payments.html">Payments</a></li>
+                <li><a href="expenses.html">Expenses</a></li>
+                <li><a href="customers.html">Customers</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Welcome to BillWizz : Your Billing Wizard :)</h2>
+        <div class="module-links">
+            <a href="inventory.html" class="module-link">Inventory</a>
+            <a href="invoices.html" class="module-link">Invoices</a>
+            <a href="mailing.html" class="module-link">Mailing & SMS</a>
+            <a href="payments.html" class="module-link">Payments</a>
+            <a href="expenses.html" class="module-link">Expenses</a>
+            <a href="customers.html" class="module-link">Customers</a>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Inventory Management System. All rights reserved.</p>
+    </footer>
+</body>
+</html>

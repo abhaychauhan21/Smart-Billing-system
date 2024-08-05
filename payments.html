@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payments</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+            if (!currentUser) {
+                window.location.href = 'login.html';
+            }
+        });
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Payments</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="inventory.html">Inventory</a></li>
+                <li><a href="invoices.html">Invoices</a></li>
+                <li><a href="mailing.html">Mailing & SMS</a></li>
+                <li><a href="payments.html">Payments</a></li>
+                <li><a href="expenses.html">Expenses</a></li>
+                <li><a href="customers.html">Customers</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Manage Payments</h2>
+        
+        <div class="payment-methods">
+            <button id="pay-upi-btn">Pay via UPI</button>
+            <button id="pay-card-btn">Pay via Credit/Debit Card</button>
+            <button id="pay-netbanking-btn">Pay via Net Banking</button>
+            <button id="pay-neft-btn">Pay via NEFT</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Inventory Management System. All rights reserved.</p>
+    </footer>
+    <script src="payments.js"></script>
+</body>
+</html>
+

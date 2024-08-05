@@ -1,0 +1,167 @@
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1.logo {
+    font-family: 'Lobster', cursive;
+    font-size: 3em;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+main h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.module-links {
+    display: flex;
+    flex-direction: column; /* Change to column for vertical layout */
+    align-items: center; /* Center align buttons */
+}
+
+.module-link {
+    background-color: #333;
+    color: white;
+    padding: 15px 30px;
+    margin: 10px 0; /* Margin adjusted for vertical spacing */
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2em;
+    display: block; /* Ensure each link takes full width */
+    width: 200px; /* Set a fixed width */
+}
+
+.module-link:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Styles for tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    text-align: left;
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+/* Styles for buttons */
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+}
+#add-expense-form {
+    margin-top: 20px;
+}
+
+#add-expense-form input {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+#add-expense-form button {
+    margin-top: 10px;
+}
+.payment-methods {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center align buttons */
+}
+
+#add-expense-btn {
+    display: inline-block;
+    margin: 20px auto;
+}
+
+.payment-methods button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px; /* Larger padding for bigger buttons */
+    border: none;
+    cursor: pointer;
+    margin: 10px 0; /* Vertical spacing between buttons */
+    width: 100%; /* Full width button */
+    max-width: 300px; /* Optional: restrict maximum width */
+    font-size: 16px; /* Larger text size */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.payment-methods button:hover {
+    background-color: #45a049;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoices</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+            if (!currentUser) {
+                window.location.href = 'login.html';
+            }
+        });
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Invoices</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="inventory.html">Inventory</a></li>
+                <li><a href="invoices.html">Invoices</a></li>
+                <li><a href="mailing.html">Mailing & SMS</a></li>
+                <li><a href="payments.html">Payments</a></li>
+                <li><a href="expenses.html">Expenses</a></li>
+                <li><a href="customers.html">Customers</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Manage Invoices</h2>
+        <table id="invoices-table">
+            <thead>
+                <tr>
+                    <th>Invoice ID</th>
+                    <th>Client Name</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dynamic Content Here -->
+            </tbody>
+        </table>
+        <button id="add-invoice-btn">Add Invoice</button>
+        <button id="print-all-btn">Print All Invoices</button>
+    </main>
+    <footer>
+        <p>&copy; 2024 Inventory Management System. All rights reserved.</p>
+    </footer>
+    <script src="invoices.js"></script>
+</body>
+</html>

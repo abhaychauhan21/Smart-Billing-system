@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mailing & SMS</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+            if (!currentUser) {
+                window.location.href = 'login.html';
+            }
+        });
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Mailing & SMS</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="inventory.html">Inventory</a></li>
+                <li><a href="invoices.html">Invoices</a></li>
+                <li><a href="mailing.html">Mailing & SMS</a></li>
+                <li><a href="payments.html">Payments</a></li>
+                <li><a href="expenses.html">Expenses</a></li>
+                <li><a href="customers.html">Customers</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Send Emails and SMS</h2>
+        <table id="mailing-table">
+            <thead>
+                <tr>
+                    <th>Message ID</th>
+                    <th>Recipient</th>
+                    <th>Type</th>
+                    <th>Message</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dynamic Content Here -->
+            </tbody>
+        </table>
+        <button id="send-message-btn">Send Message</button>
+    </main>
+    <footer>
+        <p>&copy; 2024 Inventory Management System. All rights reserved.</p>
+    </footer>
+    <script src="mailing.js"></script>
+</body>
+</html>
